@@ -1,0 +1,122 @@
+body.body-toneel {
+  background-image: url(toneel/backgroundtoneel_fixed_600.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;}
+.about-sohappy,
+.toneel-rooftopcontent,
+.toneel-neemmein {
+  padding: 0 2%;
+}
+
+//SO HAPPY
+.sohappy {
+  margin: 0 auto;
+  width: 90%;
+  h4 {
+    color: #696866;
+  }
+  .about-sohappy {
+    background-color: #fafafa;
+    @include transform(rotate(-1deg));
+  }
+}
+
+.credits {
+  background-color: lightgrey;
+  font-size: 80%;
+  margin-top: 1em;
+  font-weight: bold;
+  line-height: 1.25em;
+  .toneel-credits2 {
+    @include transform(rotate(-1deg));
+  }
+  .credits-sohappy {
+    @include transform(rotate(-2deg));
+  }
+}
+
+.toneel-foto2 {
+  width: 70%;
+  margin: 0 auto;
+}
+.toneel-rooftop1 {
+  font-size: 80%;
+  background-color: #f9ffff;
+  @include transform(rotate(2deg));
+  width: 95%;
+  font-weight: bold;
+}
+.toneel-neemmein, .toneel-rooftopcontent {
+  background-color: #fafafa;
+  @include transform(rotate(1deg));
+  width: 85%;
+  margin: 0 auto;
+  h4 {
+    color: #696866;
+  }
+}
+.toneel-rooftopcontent {
+  @include transform(rotate(-1deg));
+  width: 90%;
+}
+
+@media screen and (min-width: 601px) {
+
+  .logo-content {
+    width: 48%;
+    float: left;
+  }
+  .sohappy, .neemmein {
+    width: 49%;
+//    clear: both;
+    float: left;
+    padding: 4%;
+  }
+  .neemmein {
+    float: right;
+  }
+  .toneel-foto1 {
+    width: 35%;
+    float: right;
+    margin: 7em 3em 0;
+  }
+  .toneel-foto2 {
+    width: 35%;
+    float: left;
+    margin-left: 6em;
+  }
+  .toneel-foto3 {
+    float: right;
+    margin-top: -20em;
+    width: 45%;
+  }
+  .toneel-rooftop1 {
+    width: 95%;
+    line-height: 1.25em;
+    float: right;
+  }
+  .toneel-rooftop2 {
+    float: none;
+    width: 90%;
+  }
+  .rooftop {
+    width: 49%;
+    clear: left;
+  }
+  .toneel-credits3 {
+    width: 85%;
+    margin: 0 auto;
+    @include transform(rotate(1deg));
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  body.body-toneel {
+    background-image: url(toneel/backgroundtoneel_fixed_768.jpg);
+    background-size: 100%;
+  }
+}

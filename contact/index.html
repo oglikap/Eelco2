@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rutger Kroon">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+  </head>
+  <body class="body-contact">
+    <!--NAVIGATION-->
+    <div class="w3-row" id="navigation">
+      <nav class="navi">
+        <div class="w3-container">
+          <div class="navbar w3-hide-small">
+            <section class="navigation-right">
+              <section class="w3-btn navbar_item button-home"><a href="../index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/home_32.png" alt="" /></span>Home</a></section>
+              <section class="w3-btn navbar_item button-toneel"><a href="../toneel/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/at-sign_32.png" alt="" /></span>Toneel</a></section>
+              <section class="w3-btn navbar_item button-over"><a href="../homsk/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/address_32.png" alt="" /></span>Over</a></section>
+              <section class="w3-btn navbar_item button-workshop"><a href="../workshops/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/factory_32.png" alt="" /></span>Workshops</a></section>
+          </div>
+        <div class="w3-hide-medium w3-hide-large">
+          <ul class="w3-navbar navbar_small">
+            <li class="w3-opennav w3-left"><a href="../index.html"><img src="../images/home_32.png" alt="" /></a></li>
+            <li class="w3-opennav w3-right">
+              <a href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><img src="../images/layout4_32.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+          <ul class="w3-navbar">
+            <li><a class="w3-padding-large navbar_item" href="../index.html">Home</a></li>
+            <li><a class="w3-padding-large navbar_item" href="../toneel/index.html">Toneel</a></li>
+            <li><a class="w3-padding-large navbar_item" href="../workshops/index.html">Workshops</a></li>
+            <li><a class="w3-padding-large navbar_item" href="../homsk/index.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--HEADER-->
+    <section class="logo-content header">
+      <section class="logo">
+        <a href="../index.html">
+          <img src="../images/HOMSK_small_white.png" alt="logo Stichting HOMSK" class="logo" />
+        </a>
+        <h2 class="subtitle">Toneel. <small>En meer.</small></h2>
+      </section>
+    </section>
+  </div>
+  <div class="w3-row">
+    <div class="w3-col s12 m6 break">
+      <section class="contact-mail">
+        <p>Stuur Eelco een <br>
+          <a href="&#109;a&#105;l&#116;&#111;:&#107;&#111;&#111;&#115;&#53;&#53;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">
+            <img src="../images/mail_128.png" alt="Stuur een mail" /></p>
+          </a>
+      </section>
+    </div>
+    <div class="w3-col s12 m6 break">
+      <section class="contact-facebook">
+        <p>Of stuur iets via <br><img src="../images/facebook_128.png" alt="Contact via Facebook" /></p>
+      </section>
+    </div>
+    <div class="w3-col s12 break">
+      <section class="contact-maps">
+        <p>Vindt uw weg naar het theater<br \> <img src="../images/arrow1-down_128.png" alt="google maps" /></p>
+      </section>
+    </div>
+  </div>
+  <!-- Add Google Maps -->
+  <div id="googleMap" style="height:400px;filter: grayscale(90%);-webkit-filter: grayscale(90%);"></div>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  var myCenter = new google.maps.LatLng(53.2012334, 5.799913300000071);
+
+  function initialize() {
+  var mapProp = {
+  center:myCenter,
+  zoom:12,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+  marker.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-center w3-padding-32 w3-xlarge">
+      <a href="#" class="w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+      <a href="#" class="w3-hover-text-grey w3-show-inline-block"><i class="fa fa-flickr"></i></a>
+      <a href="#" class="w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+      <p class="w3-medium">U bracht het tot hier. Gefeliciteerd!</p>
+      <p class="w3-medium">© Eelco Venema <small>i.s.m.</small><span style="font-family:'Baloo Da';font-size:1em;"> BLAUWDRUK.net</span></p>
+    </footer>
+
+    <!--JS-->
+    <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+  </body>
+</html>

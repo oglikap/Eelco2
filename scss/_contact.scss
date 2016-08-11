@@ -1,0 +1,35 @@
+body.body-contact {
+  background-image: url(contact/background_small.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+  border: 1px solid lightgrey;
+}
+.break {
+  margin: 1em 0 1em 0;
+}
+.contact-mail,
+.contact-facebook,
+.contact-maps {
+  width: 65%;
+  @include transform(rotate(-1deg));
+  background: lightgrey;
+  margin: 0 auto;
+  font-size: 2em;
+  text-align: center;
+  border: 3px solid #fafafa;
+}
+.contact-facebook {
+  @include transform(rotate(2deg));
+}
+.contact-maps {
+  @include transform(rotate(1deg));
+}
+@media screen and (min-width: 601px) {
+  .contact-mail,
+  .contact-facebook,
+  .contact-maps {
+    width: 74%;
+  }
+}

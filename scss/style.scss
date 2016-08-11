@@ -1,0 +1,133 @@
+@import "reset";
+@import "w3";
+@import "flex";
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Baloo+Da);
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #fafafa;
+}
+p {
+  font-size: 1.25em;
+}
+img {max-width: 100%;}
+h2,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+h4 {font-size: 1.5em;}
+h2 {font-size: 2.5em;}
+// Navigation
+//#navigation {
+//  border-bottom: 1px solid #fafafa;
+//}
+.navi {
+//  background: #797979;
+  color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+  .navbar_item {
+    border-top: 1px solid #fafafa;
+  }
+  .w3-btn {
+//    background: #797979;
+    background: none;
+    padding: 0;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+//Logo
+.logo-content {
+//  background-color: black;
+  text-align: center;
+  h2 {
+    font-size: 1.5em;
+    color: #fafafa;
+    font-weight: bold;
+  }
+}
+
+footer {
+  margin-top: 6em;
+  background: #797979;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 601px) {
+
+  .navi {
+    border: none;
+    width: 25%;
+    float: right;
+    .navbar {
+      height: 200px;
+    }
+    .navbar_item {
+    border: 3px solid #fafafa;
+    background: grey;
+//    color: #696866;
+    font-weight: bold;
+    }
+  }
+  ul.block {
+    display: block;
+  }
+  .button-home {
+    width: 65%;
+    margin: 0.5em 2em 0.5em 1em;
+    @include transform(rotate(-3deg));
+  }
+  .button-over {
+    width: 65%;
+    margin-bottom: 0.5em;
+    @include transform(rotate(1deg));
+  }
+  .button-toneel {
+    width: 75%;
+    margin-bottom: 0.5em;
+    @include transform(rotate(2deg));
+  }
+  .button-workshop {
+    width: 85%;
+    margin-right: 2em;
+    @include transform(rotate(-1deg));
+  }
+  .button-contact {
+    width: 70%;
+    margin-top: 0.5em;
+    float: left;
+    @include transform(rotate(2deg));
+  }
+
+}
+@import "toneel";
+@import "homsk";
+@import "workshops";
+@import "contact";
+@import "home";

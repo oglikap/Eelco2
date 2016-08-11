@@ -1,0 +1,66 @@
+body.body-wshop {
+    background-image: url(workshops/RooftopMemories-small.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+.workshops-article,
+.workshop-data {
+  background-color: #fafafa;
+  width: 96%;
+  @include transform(rotate(-2deg));
+  margin: 0 auto;
+  padding: 0 0.25em 1em 1em;
+  box-shadow: 1px 1px 2px grey;
+  h4.header-workshops, h4.header-data {
+    color: #696866;
+  }
+}
+.picturecredits {
+  font-size: 80%;
+  background: #f9f9f9;
+  @include transform(rotate(-1deg));
+}
+.workshop-data {
+  @include transform(rotate(1deg));
+}
+.questions {
+  width: 200px;
+  height: 200px;
+  @include border-radius(50%);
+  background: #696866;
+  float: right;
+  margin: 1em 3em 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.75em;
+  font-weight: bold;
+  border: 2px solid #fafafa;
+  @include transform(rotate(-2deg));
+}
+
+@media screen and (min-width: 601px) {
+  body.body-wshop {
+    background-image: url(workshops/RooftopMemories-medium.jpg);
+  }
+  .workshops-article {
+    width: 98%;
+  }
+  .workshop-data {
+    width: 70%;
+  }
+  h2.subtitle-grey {
+    color: #a8a8a8;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body.body-wshop {
+    background-image: url(workshops/RooftopMemories-large.jpg);
+  }
+  h2.subtitle {
+    color: #fafafa;
+  }
+}

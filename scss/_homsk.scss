@@ -1,0 +1,82 @@
+body.body-homsk {
+  background-image: url(homsk/background_fixed_600.jpg);
+  background-repeat: no-repeat;
+  background-position: left left;
+  background-attachment: fixed;
+  background-size: cover;
+  border: 1px solid lightgrey;
+}
+.homsk-intro,
+.about-explain,
+.about-thematiek,
+.about-parallel {
+  margin: 0 auto;
+  background: #fafafa;
+  width: 95%;
+  @include transform(rotate(-1deg));
+  padding: 0 2%;
+  box-shadow: 1px 1px 2px grey;
+}
+.about-explain {
+  @include transform(rotate(1deg));
+  width: 97%;
+}
+.about-portrait {
+  width: 65%;
+  margin: 1em auto;
+  p.text-portrait {
+    color: #fafafa;
+  }
+}
+.about-parallel {
+  @include transform(rotate(2deg));
+}
+.portrait {
+  border: 1px solid #fafafa;
+  padding: 0.5em;
+  background: #fafafa;
+}
+h4.header-about,
+h4.header-explain,
+h4.header-thematiek,
+h4.header-parallel {
+  color: #696866;
+}
+
+@media screen and (min-width: 601px) {
+  .homsk-intro {
+    width: 70%;
+  }
+  .about-explain {
+    width: 85%;
+    float: left;
+  }
+  .about-thematiek {
+    clear: left;
+    margin-left: -2em;
+    width: 90%;
+  }
+  .about-parallel {
+    margin-left: -3em;
+  }
+}
+@media screen and (min-width: 769px) {
+  .homsk-intro {
+    width: 80%;
+  }
+  .about-explain {
+    width: 75%;
+    float: left;
+  }
+  .about-thematiek {
+    clear: left;
+    margin-left: -2em;
+    width: 80%;
+  }
+  .about-parallel {
+    margin-left: -4em;
+  }
+  .about-portrait {
+    width: 55%;
+  }
+}
