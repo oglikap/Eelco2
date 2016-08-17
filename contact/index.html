@@ -6,6 +6,7 @@
     <meta name="author" content="Rutger Kroon">
     <title>Contact</title>
     <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
   </head>
   <body class="body-contact">
     <!--NAVIGATION-->
@@ -13,11 +14,10 @@
       <nav class="navi">
         <div class="w3-container">
           <div class="navbar w3-hide-small">
-            <section class="navigation-right">
-              <section class="w3-btn navbar_item button-home"><a href="../index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/home_32.png" alt="" /></span>Home</a></section>
-              <section class="w3-btn navbar_item button-toneel"><a href="../toneel/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/at-sign_32.png" alt="" /></span>Toneel</a></section>
-              <section class="w3-btn navbar_item button-over"><a href="../homsk/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/address_32.png" alt="" /></span>Over</a></section>
-              <section class="w3-btn navbar_item button-workshop"><a href="../workshops/index.html"><span style="padding:0;margin:0;width:30%;"><img src="../images/factory_32.png" alt="" /></span>Workshops</a></section>
+            <section class="w3-btn navbar_item button-home"><a href="../index.html">Home</a></section>
+            <section class="w3-btn navbar_item button-toneel"><a href="../toneel/index.html">Theater</a></section>
+            <section class="w3-btn navbar_item button-over"><a href="../homsk/index.html">Over</section>
+            <section class="w3-btn navbar_item button-workshop"><a href="../workshops/index.html">Workshops</a></section>
           </div>
         <div class="w3-hide-medium w3-hide-large">
           <ul class="w3-navbar navbar_small">
@@ -31,7 +31,7 @@
         <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
           <ul class="w3-navbar">
             <li><a class="w3-padding-large navbar_item" href="../index.html">Home</a></li>
-            <li><a class="w3-padding-large navbar_item" href="../toneel/index.html">Toneel</a></li>
+            <li><a class="w3-padding-large navbar_item" href="../toneel/index.html">Theater</a></li>
             <li><a class="w3-padding-large navbar_item" href="../workshops/index.html">Workshops</a></li>
             <li><a class="w3-padding-large navbar_item" href="../homsk/index.html">Contact</a></li>
           </ul>
@@ -44,7 +44,7 @@
         <a href="../index.html">
           <img src="../images/HOMSK_small_white.png" alt="logo Stichting HOMSK" class="logo" />
         </a>
-        <h2 class="subtitle">Toneel. <small>En meer.</small></h2>
+        <h2 class="subtitle">THEATER.</h2>
       </section>
     </section>
   </div>
@@ -69,32 +69,19 @@
     </div>
   </div>
   <!-- Add Google Maps -->
-  <div id="googleMap" style="height:400px;filter: grayscale(90%);-webkit-filter: grayscale(90%);"></div>
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script>
-  var myCenter = new google.maps.LatLng(53.2012334, 5.799913300000071);
-
-  function initialize() {
-  var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-  var marker = new google.maps.Marker({
-  position:myCenter,
-  });
-
-  marker.setMap(map);
-  }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
-
+    <div id="map"></div>
+      <script>
+        function initMap() {
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+              center: {lat: 53.2012334, lng: 5.799913300000071},
+              zoom: 12
+          });
+        }
+      </script>
+      <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA36BfIB4G_ERW5FCTdBhTcrhuO0OFeGO0&callback=initMap">
+      </script>
     <!-- Footer -->
     <footer class="w3-container w3-center w3-padding-32 w3-xlarge">
       <a href="#" class="w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>

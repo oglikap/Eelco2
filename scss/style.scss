@@ -6,6 +6,22 @@
 @import url(https://fonts.googleapis.com/css?family=Baloo+Da);
 @import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: 'Due Date';
+  src: url(../fonts/DueDate.ttf);
+}
+@font-face {
+  font-family: 'Top Secret';
+  src: url("../fonts/Top Secret.ttf");
+}
+@font-face {
+  font-family: 'Stardos Stencil';
+  src: url("../fonts/stardos stencil/StardosStencil-Regular.ttf");
+}
+@font-face {
+  font-family: 'Stardos Stencil Bold';
+  src: url("../fonts/stardos stencil/StardosStencil-Bold.ttf");
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -29,6 +45,10 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   background: #fafafa;
+  @include transform(rotate(-1deg));
+}
+#navigation {
+  border-bottom: 1px solid grey;
 }
 p {
   font-size: 1.25em;
@@ -36,20 +56,21 @@ p {
 img {max-width: 100%;}
 h2,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stardos Stencil Bold', 'Top Secret', 'Due Date', 'Montserrat', sans-serif;
   text-align: center;
   font-weight: bold;
 }
-h4 {font-size: 1.5em;}
-h2 {font-size: 2.5em;}
+h4 {font-size: 2em;}
+h2 {font-size: 3.5em;}
 // Navigation
 //#navigation {
 //  border-bottom: 1px solid #fafafa;
 //}
+
 .navi {
 //  background: #797979;
   color: #fafafa;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stardos Stencil Bold', 'Montserrat', sans-serif;
   .navbar_item {
     border-top: 1px solid #fafafa;
   }
@@ -67,12 +88,22 @@ h2 {font-size: 2.5em;}
 //  background-color: black;
   text-align: center;
   h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     color: #fafafa;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px white;
+    text-transform: uppercase;
   }
 }
-
+#map {
+  width: 80%;
+  margin: 0 auto;
+  height: 400px;
+  @include transform(rotate(2deg));
+  margin-top: 1em;
+  border: 4px solid #fafafa;
+}
 footer {
   margin-top: 6em;
   background: #797979;
@@ -83,15 +114,21 @@ footer {
 
   .navi {
     border: none;
-    width: 25%;
+    width: 45%;
+    height: 150px;
     float: right;
     .navbar {
-      height: 200px;
+      @include flexbox;
+      @include flex-direction(column);
+      @include flex-wrap(wrap);
+      @include justify-content(space-around);
+      height: 150px;
     }
     .navbar_item {
     border: 3px solid #fafafa;
     background: grey;
 //    color: #696866;
+    font-size: 2em;
     font-weight: bold;
     }
   }
@@ -99,29 +136,30 @@ footer {
     display: block;
   }
   .button-home {
-    width: 65%;
-    margin: 0.5em 2em 0.5em 1em;
+    width: 40%;
+  //  margin: 1em 2em 0.5em 1em;
     @include transform(rotate(-3deg));
   }
   .button-over {
-    width: 65%;
-    margin-bottom: 0.5em;
+    width: 40%;
+  //  margin: 1em 0 0.5em 0.5em;
     @include transform(rotate(1deg));
   }
   .button-toneel {
-    width: 75%;
-    margin-bottom: 0.5em;
+    width: 50%;
+//    margin-bottom: 0.5em;
     @include transform(rotate(2deg));
   }
   .button-workshop {
-    width: 85%;
-    margin-right: 2em;
+    width: 50%;
+//    margin: 0 -0.25em 0 1em;
+//    float: right;
     @include transform(rotate(-1deg));
   }
   .button-contact {
-    width: 70%;
-    margin-top: 0.5em;
-    float: left;
+    width: 40%;
+//    margin-top: 0.5em;
+//    float: left;
     @include transform(rotate(2deg));
   }
 

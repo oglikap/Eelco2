@@ -10,10 +10,10 @@ body.body-wshop {
 .workshops-article,
 .workshop-data {
   background-color: #fafafa;
-  width: 96%;
+  width: 90%;
   @include transform(rotate(-2deg));
   margin: 0 auto;
-  padding: 0 0.25em 1em 1em;
+  padding: 0 0.25em 1em 2em;
   box-shadow: 1px 1px 2px grey;
   h4.header-workshops, h4.header-data {
     color: #696866;
@@ -26,6 +26,10 @@ body.body-wshop {
 }
 .workshop-data {
   @include transform(rotate(1deg));
+}
+.workshop-foto {
+  width: 100%;
+  margin: 1em;
 }
 .questions {
   width: 200px;
@@ -47,12 +51,13 @@ body.body-wshop {
   }
   .workshops-article {
     width: 98%;
+    margin-left: 2em;
   }
   .workshop-data {
     width: 70%;
   }
   h2.subtitle-grey {
-    color: #a8a8a8;
+    color: #696866;
   }
 }
 

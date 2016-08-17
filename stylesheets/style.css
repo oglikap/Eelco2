@@ -1591,11 +1591,31 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 .w3-text-shadow-white {
   text-shadow: 1px 1px 0 #ddd; }
 
+@font-face {
+  font-family: 'Due Date';
+  src: url(../fonts/DueDate.ttf); }
+@font-face {
+  font-family: 'Top Secret';
+  src: url("../fonts/Top Secret.ttf"); }
+@font-face {
+  font-family: 'Stardos Stencil';
+  src: url("../fonts/stardos stencil/StardosStencil-Regular.ttf"); }
+@font-face {
+  font-family: 'Stardos Stencil Bold';
+  src: url("../fonts/stardos stencil/StardosStencil-Bold.ttf"); }
 body {
   font-family: 'Josefin Sans', sans-serif;
   max-width: 1024px;
   margin: 0 auto;
-  background: #fafafa; }
+  background: #fafafa;
+  -moz-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg); }
+
+#navigation {
+  border-bottom: 1px solid grey; }
 
 p {
   font-size: 1.25em; }
@@ -1605,19 +1625,19 @@ img {
 
 h2,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stardos Stencil Bold', 'Top Secret', 'Due Date', 'Montserrat', sans-serif;
   text-align: center;
   font-weight: bold; }
 
 h4 {
-  font-size: 1.5em; }
+  font-size: 2em; }
 
 h2 {
-  font-size: 2.5em; }
+  font-size: 3.5em; }
 
 .navi {
   color: #fafafa;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Stardos Stencil Bold', 'Montserrat', sans-serif; }
   .navi .navbar_item {
     border-top: 1px solid #fafafa; }
   .navi .w3-btn {
@@ -1629,9 +1649,24 @@ h2 {
 .logo-content {
   text-align: center; }
   .logo-content h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     color: #fafafa;
-    font-weight: bold; }
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px white;
+    text-transform: uppercase; }
+
+#map {
+  width: 80%;
+  margin: 0 auto;
+  height: 400px;
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+  margin-top: 1em;
+  border: 4px solid #fafafa; }
 
 footer {
   margin-top: 6em;
@@ -1641,21 +1676,41 @@ footer {
 @media screen and (min-width: 601px) {
   .navi {
     border: none;
-    width: 25%;
+    width: 45%;
+    height: 150px;
     float: right; }
     .navi .navbar {
-      height: 200px; }
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      justify-content: space-around;
+      height: 150px; }
     .navi .navbar_item {
       border: 3px solid #fafafa;
       background: grey;
+      font-size: 2em;
       font-weight: bold; }
 
   ul.block {
     display: block; }
 
   .button-home {
-    width: 65%;
-    margin: 0.5em 2em 0.5em 1em;
+    width: 40%;
     -moz-transform: rotate(-3deg);
     -o-transform: rotate(-3deg);
     -ms-transform: rotate(-3deg);
@@ -1663,8 +1718,7 @@ footer {
     transform: rotate(-3deg); }
 
   .button-over {
-    width: 65%;
-    margin-bottom: 0.5em;
+    width: 40%;
     -moz-transform: rotate(1deg);
     -o-transform: rotate(1deg);
     -ms-transform: rotate(1deg);
@@ -1672,8 +1726,7 @@ footer {
     transform: rotate(1deg); }
 
   .button-toneel {
-    width: 75%;
-    margin-bottom: 0.5em;
+    width: 50%;
     -moz-transform: rotate(2deg);
     -o-transform: rotate(2deg);
     -ms-transform: rotate(2deg);
@@ -1681,8 +1734,7 @@ footer {
     transform: rotate(2deg); }
 
   .button-workshop {
-    width: 85%;
-    margin-right: 2em;
+    width: 50%;
     -moz-transform: rotate(-1deg);
     -o-transform: rotate(-1deg);
     -ms-transform: rotate(-1deg);
@@ -1690,9 +1742,7 @@ footer {
     transform: rotate(-1deg); }
 
   .button-contact {
-    width: 70%;
-    margin-top: 0.5em;
-    float: left;
+    width: 40%;
     -moz-transform: rotate(2deg);
     -o-transform: rotate(2deg);
     -ms-transform: rotate(2deg);
@@ -1744,6 +1794,14 @@ body.body-toneel {
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg); }
 
+.toneel-foto1 .foto1 {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  margin-bottom: 4em;
+  border: 4px solid #fafafa; }
+
 .toneel-foto2 {
   width: 70%;
   margin: 0 auto; }
@@ -1766,7 +1824,7 @@ body.body-toneel {
   -ms-transform: rotate(1deg);
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg);
-  width: 85%;
+  width: 100%;
   margin: 0 auto; }
   .toneel-neemmein h4, .toneel-rooftopcontent h4 {
     color: #696866; }
@@ -1785,27 +1843,22 @@ body.body-toneel {
     float: left; }
 
   .sohappy, .neemmein {
-    width: 49%;
-    float: left;
+    width: 98%;
     padding: 4%; }
 
   .neemmein {
     float: right; }
 
   .toneel-foto1 {
-    width: 35%;
-    float: right;
-    margin: 7em 3em 0; }
+    width: 70%;
+    margin: 7em 4em 0; }
 
   .toneel-foto2 {
-    width: 35%;
-    float: left;
-    margin-left: 6em; }
+    width: 90%; }
 
   .toneel-foto3 {
-    float: right;
-    margin-top: -20em;
-    width: 45%; }
+    margin-top: 2em;
+    width: 90%; }
 
   .toneel-rooftop1 {
     width: 95%;
@@ -1817,8 +1870,8 @@ body.body-toneel {
     width: 90%; }
 
   .rooftop {
-    width: 49%;
-    clear: left; }
+    width: 98%;
+    margin-top: 2em; }
 
   .toneel-credits3 {
     width: 85%;
@@ -1932,14 +1985,14 @@ body.body-wshop {
 .workshops-article,
 .workshop-data {
   background-color: #fafafa;
-  width: 96%;
+  width: 90%;
   -moz-transform: rotate(-2deg);
   -o-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg);
   margin: 0 auto;
-  padding: 0 0.25em 1em 1em;
+  padding: 0 0.25em 1em 2em;
   box-shadow: 1px 1px 2px grey; }
   .workshops-article h4.header-workshops, .workshops-article h4.header-data,
   .workshop-data h4.header-workshops,
@@ -1961,6 +2014,10 @@ body.body-wshop {
   -ms-transform: rotate(1deg);
   -webkit-transform: rotate(1deg);
   transform: rotate(1deg); }
+
+.workshop-foto {
+  width: 100%;
+  margin: 1em; }
 
 .questions {
   width: 200px;
@@ -1987,13 +2044,14 @@ body.body-wshop {
     background-image: url(workshops/RooftopMemories-medium.jpg); }
 
   .workshops-article {
-    width: 98%; }
+    width: 98%;
+    margin-left: 2em; }
 
   .workshop-data {
     width: 70%; }
 
   h2.subtitle-grey {
-    color: #a8a8a8; } }
+    color: #696866; } }
 @media screen and (min-width: 769px) {
   body.body-wshop {
     background-image: url(workshops/RooftopMemories-large.jpg); }
@@ -2059,7 +2117,6 @@ body.body-home {
 .home-content-contact {
   width: 80vw;
   height: 80vw;
-  background: #fafafa;
   margin: 0 auto;
   -moz-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
@@ -2075,18 +2132,17 @@ body.body-home {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  opacity: 0.9;
-  margin-bottom: 1em; }
+  opacity: 0.9; }
   .home-content-about .home-button-about,
   .home-content-about .home-button-performances,
   .home-content-about .home-button-workshops,
@@ -2103,68 +2159,80 @@ body.body-home {
   .home-content-contact .home-button-performances,
   .home-content-contact .home-button-workshops,
   .home-content-contact .home-button-contact {
-    width: 60vw;
-    height: 60vw;
-    background-color: grey;
-    background-image: url(home/omsk.jpg);
-    font-family: 'Montserrat', sans-serif;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
+    width: 65vw;
+    height: 65vw;
+    background-image: url(home/eye_128.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80%;
+    font-family: 'Stardos Stencil Bold', 'Due Date','Montserrat', sans-serif;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    -moz-align-items: stretch;
-    align-items: stretch;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center;
-    font-size: 3em;
+    font-size: 3.5em;
+    text-shadow: 1px 1px 1px #fafafa;
     font-weight: bold;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    border: 6px solid black;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    border-radius: 5%;
+    color: black;
+    background-color: #ddd; }
+  .home-content-about .home-button-about,
+  .home-content-performances .home-button-about,
+  .home-content-workshops .home-button-about,
+  .home-content-contact .home-button-about {
+    background-image: url(home/address_128.png); }
+  .home-content-about .home-button-workshops,
+  .home-content-performances .home-button-workshops,
+  .home-content-workshops .home-button-workshops,
+  .home-content-contact .home-button-workshops {
+    background-image: url(home/factory_128.png);
+    line-height: 1em;
+    font-size: 2.5em; }
+  .home-content-about .home-button-contact,
+  .home-content-performances .home-button-contact,
+  .home-content-workshops .home-button-contact,
+  .home-content-contact .home-button-contact {
+    background-image: url(home/at-sign_128.png); }
 
 .home-content-performances {
-  -moz-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  -webkit-transform: rotate(3deg);
-  transform: rotate(3deg); }
-  .home-content-performances .home-button-performances {
-    background-image: url(home/eye_128.png);
-    background-size: cover; }
-
-.home-content-workshops {
   -moz-transform: rotate(1deg);
   -o-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   -webkit-transform: rotate(1deg);
-  transform: rotate(1deg); }
-  .home-content-workshops .home-button-workshops {
-    background-image: url(home/button_home_workshops.jpg); }
+  transform: rotate(1deg);
+  float: left; }
+
+.home-content-workshops {
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+  float: right; }
 
 .home-content-contact {
-  -moz-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  -webkit-transform: rotate(-5deg);
-  transform: rotate(-5deg); }
-  .home-content-contact .home-button-contact {
-    background-image: url(home/at-sign_128.png);
-    background-size: cover; }
-
-.subscript {
-  font-size: 1.75em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #777; }
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  margin-left: 2em; }
 
 @media screen and (min-width: 601px) {
   body.body_home {
@@ -2174,8 +2242,8 @@ body.body-home {
   .home-content-performances,
   .home-content-workshops,
   .home-content-contact {
-    width: 40vw;
-    height: 40vw; }
+    width: 45vw;
+    height: 45vw; }
     .home-content-about .home-button-about,
     .home-content-about .home-button-performances,
     .home-content-about .home-button-workshops,
@@ -2192,50 +2260,41 @@ body.body-home {
     .home-content-contact .home-button-performances,
     .home-content-contact .home-button-workshops,
     .home-content-contact .home-button-contact {
-      width: 27.5vw;
-      height: 27.5vw; }
+      width: 37.5vw;
+      height: 37.5vw; }
 
-  .home-content-performances {
-    margin-top: 3em; } }
+  .home-button-about {
+    margin-left: 1em; }
+
+  .home-button-performances {
+    margin-right: 1em; } }
 @media screen and (min-width: 769px) {
   body.body_home {
     background-image: url(home/background_large.jpg); }
 
   .home-content-about,
   .home-content-performances,
-  .home-content-contact,
-  .home-content-workshops {
-    width: 300px;
-    height: 300px; }
+  .home-content-workshops,
+  .home-content-contact {
+    width: 400px;
+    height: 400px; }
     .home-content-about .home-button-about,
     .home-content-about .home-button-performances,
-    .home-content-about .home-button-contact,
     .home-content-about .home-button-workshops,
+    .home-content-about .home-button-contact,
     .home-content-performances .home-button-about,
     .home-content-performances .home-button-performances,
-    .home-content-performances .home-button-contact,
     .home-content-performances .home-button-workshops,
-    .home-content-contact .home-button-about,
-    .home-content-contact .home-button-performances,
-    .home-content-contact .home-button-contact,
-    .home-content-contact .home-button-workshops,
+    .home-content-performances .home-button-contact,
     .home-content-workshops .home-button-about,
     .home-content-workshops .home-button-performances,
+    .home-content-workshops .home-button-workshops,
     .home-content-workshops .home-button-contact,
-    .home-content-workshops .home-button-workshops {
-      width: 200px;
-      height: 200px; }
-
-  .home-content-about {
-    margin-right: 32px; }
-
-  .home-content-performances {
-    margin-left: 32px; }
-
-  .home-content-workshops {
-    margin-right: 48px; }
-
-  .home-content-contact {
-    margin-left: 48px; } }
+    .home-content-contact .home-button-about,
+    .home-content-contact .home-button-performances,
+    .home-content-contact .home-button-workshops,
+    .home-content-contact .home-button-contact {
+      width: 300px;
+      height: 300px; } }
 
 /*# sourceMappingURL=style.css.map */
