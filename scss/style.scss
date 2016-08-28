@@ -45,10 +45,13 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   background: #fafafa;
-  @include transform(rotate(-1deg));
 }
 #navigation {
   border-bottom: 1px solid grey;
+}
+.flex-row {
+  @include flexbox;
+  @include justify-content(center);
 }
 p {
   font-size: 1.25em;
@@ -62,20 +65,13 @@ h4 {
 }
 h4 {font-size: 2em;}
 h2 {font-size: 3.5em;}
-// Navigation
-//#navigation {
-//  border-bottom: 1px solid #fafafa;
-//}
-
 .navi {
-//  background: #797979;
   color: #fafafa;
   font-family: 'Stardos Stencil Bold', 'Montserrat', sans-serif;
   .navbar_item {
     border-top: 1px solid #fafafa;
   }
   .w3-btn {
-//    background: #797979;
     background: none;
     padding: 0;
     a {
@@ -85,7 +81,6 @@ h2 {font-size: 3.5em;}
 }
 //Logo
 .logo-content {
-//  background-color: black;
   text-align: center;
   h2 {
     font-size: 2.5em;
@@ -110,8 +105,12 @@ footer {
   color: #fafafa;
 }
 
-@media screen and (min-width: 601px) {
+// MEDIA QUERIES
 
+@media screen and (min-width: 601px) {
+  body {
+    @include transform(rotate(-1deg));
+  }
   .navi {
     border: none;
     width: 45%;
@@ -127,7 +126,6 @@ footer {
     .navbar_item {
     border: 3px solid #fafafa;
     background: grey;
-//    color: #696866;
     font-size: 2em;
     font-weight: bold;
     }
@@ -137,32 +135,31 @@ footer {
   }
   .button-home {
     width: 40%;
-  //  margin: 1em 2em 0.5em 1em;
     @include transform(rotate(-3deg));
   }
   .button-over {
     width: 40%;
-  //  margin: 1em 0 0.5em 0.5em;
     @include transform(rotate(1deg));
   }
   .button-toneel {
     width: 50%;
-//    margin-bottom: 0.5em;
     @include transform(rotate(2deg));
   }
   .button-workshop {
-    width: 50%;
-//    margin: 0 -0.25em 0 1em;
-//    float: right;
+    width: 55%;
     @include transform(rotate(-1deg));
   }
   .button-contact {
     width: 40%;
-//    margin-top: 0.5em;
-//    float: left;
     @include transform(rotate(2deg));
   }
 
+}
+
+@media screen and (min-width: 960px) {
+  .button-workshop {
+    width: 50%;
+  }
 }
 @import "toneel";
 @import "homsk";
