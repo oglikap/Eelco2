@@ -1,10 +1,13 @@
 body.body-wshop {
-    background-image: url(workshops/RooftopMemories-small.jpg);
+    background-image: url(workshops/background-600.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
+//    background-size: contain;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
+//    background-size: cover;
+    height: 100%;
   }
 .workshops-article,
 .workshop-data {
@@ -18,35 +21,40 @@ body.body-wshop {
     color: #696866;
   }
 }
+h2.subtitle-grey {
+  color: #828282;
+}
 .picturecredits {
   font-size: 80%;
-  background: #f9f9f9;
+  background: #f2f5da;
   @include transform(rotate(-1deg));
 }
 .workshop-data {
   @include transform(rotate(1deg));
 }
 .workshop-foto {
-  width: 100%;
-  margin: 1em;
+  width: 80%;
+  padding: 1em;
+  background: #fafafa;
+  margin: 0 auto;
 }
 .questions {
   width: 200px;
   height: 200px;
   @include border-radius(50%);
   background: #696866;
-  float: right;
-  margin: 1em 3em 0 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.75em;
   font-weight: bold;
   border: 2px solid #fafafa;
   @include transform(rotate(-2deg));
+  display: block;
+  margin: 1em auto 2em auto;
 }
 
 @media screen and (min-width: 601px) {
   body.body-wshop {
-    background-image: url(workshops/RooftopMemories-medium.jpg);
+    background-image: url(workshops/background-768.jpg);
   }
   .workshops-article {
     width: 98%;
@@ -56,15 +64,24 @@ body.body-wshop {
     width: 70%;
   }
   h2.subtitle-grey {
-    color: #696866;
+    color: #828282;
+  }
+  .workshop-foto {
+    width: 70%;
+  }
+  .picturecredits {
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 769px) {
   body.body-wshop {
-    background-image: url(workshops/RooftopMemories-large.jpg);
+    background-image: url(workshops/background-1024.jpg);
   }
   h2.subtitle {
     color: #fafafa;
+  }
+  .workshop-foto {
+    width: 60%;
   }
 }

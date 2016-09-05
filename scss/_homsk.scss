@@ -1,9 +1,9 @@
 body.body-homsk {
-  background-image: url(homsk/background_fixed_600.jpg);
+  background-image: url(../stylesheets/home/background_small-600.jpg);
   background-repeat: no-repeat;
   background-position: left left;
   background-attachment: fixed;
-  background-size: cover;
+//  background-size: cover;
   border: 1px solid lightgrey;
 }
 .homsk-intro,
@@ -44,6 +44,10 @@ h4.header-parallel {
 }
 
 @media screen and (min-width: 601px) {
+  body.body-homsk {
+    background-image: url(../stylesheets/home/background_medium-768.jpg);
+  }
+
   .homsk-intro {
     width: 70%;
   }
@@ -61,6 +65,10 @@ h4.header-parallel {
   }
 }
 @media screen and (min-width: 769px) {
+  body.body-homsk {
+    background-image: url(../stylesheets/home/background_large-1024.jpg);
+    background-position: center;
+    }
   .homsk-intro {
     width: 80%;
   }
@@ -78,5 +86,11 @@ h4.header-parallel {
   }
   .about-portrait {
     width: 55%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body.body-homsk {
+      background-size: 70%;
   }
 }

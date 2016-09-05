@@ -12,7 +12,7 @@ body.body-toneel {
 }
 //SO HAPPY
 .sohappy {
-  margin: 0 auto;
+  margin: auto;
   width: 90%;
   h4 {
     color: #696866;
@@ -20,6 +20,19 @@ body.body-toneel {
   .about-sohappy {
     background-color: #fafafa;
     @include transform(rotate(-1deg));
+    padding-bottom: 3em;
+  }
+  .playlist {
+    width: 90%;
+    background: #fffce7;
+    margin: 1em auto;
+    padding: 2%;
+    line-height: 1.3em;
+    @include transform(rotate(1deg));
+    a {
+      text-decoration: none;
+      color: #006a8c;
+    }
   }
 }
 .credits {
@@ -38,20 +51,28 @@ body.body-toneel {
 .toneel-foto1 {
   .foto1 {
     @include border-radius(50%);
-    margin-bottom: 4em;
     border: 4px solid #fafafa;
+    margin: auto;
+    display: block;
   }
 }
 .toneel-foto2 {
   width: 70%;
   margin: 0 auto;
 }
+.toneel-foto3 {
+  display: block;
+  margin: 0 auto;
+}
 .toneel-rooftop1 {
   font-size: 80%;
   background-color: #f9ffff;
   @include transform(rotate(2deg));
-  width: 75%;
   font-weight: bold;
+}
+.toneel-rooftop2 {
+  width: 75%;
+  margin: 0 auto;
 }
 .toneel-neemmein, .toneel-rooftopcontent {
   background-color: #fafafa;
@@ -81,9 +102,14 @@ body.body-toneel {
     width: 96%;
     float: right;
   }
+  .sohappy {
+    .about-sohappy {
+      padding-bottom: 1em;
+    }
+  }
   .toneel-foto1 {
     width: 70%;
-    margin: 7em 4em 0;
+    margin: 4em auto 2em auto;
   }
   .toneel-foto2 {
     width: 90%;
@@ -95,11 +121,10 @@ body.body-toneel {
   .toneel-rooftop1 {
     width: 85%;
     line-height: 1.25em;
-//    float: right;
   }
   .toneel-rooftop2 {
     float: none;
-    width: 90%;
+    width: 70%;
   }
   .rooftop {
     width: 98%;
@@ -122,15 +147,19 @@ body.body-toneel {
   .toneel-rooftop1 {
     width: 100%;
   }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  body.body-toneel {
-    background-image: url(toneel/backgroundtoneel_fixed_1024.jpg);
-//    background-size: 100%;
+  .toneel-rooftop2 {
+    width: 80%;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) and (max-width: 1440px) {
   body.body-toneel {
-    background-image: url(toneel/backgroundtoneel_fixed_1260.jpg);
+    background-image: url(toneel/backgroundtoneel_fixed_1024.jpg);
+//    background-size: 70%;
+  }
+}
+@media screen and (min-width: 1441px) {
+  body.body-toneel {
+    background-image: url(toneel/backgroundtoneel_fixed_1024.jpg);
+    background-size: 70%;
   }
 }

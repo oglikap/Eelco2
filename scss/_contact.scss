@@ -1,9 +1,9 @@
 body.body-contact {
-  background-image: url(contact/background_small.jpg);
+  background-image: url(contact/background_small2.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  background-size: cover;
+//  background-size: cover;
   border: 1px solid lightgrey;
 }
 .break {
@@ -28,9 +28,17 @@ body.body-contact {
   @include border-radius(0 0 45% 45%);
 }
 @media screen and (min-width: 601px) {
+  body.body-contact {
+    background-image: url(contact/background_medium2.jpg);
+  }
   .contact-mail,
   .contact-facebook,
   .contact-maps {
     width: 74%;
+  }
+}
+@media screen and (min-width: 769px) {
+  body.body-contact {
+    background-image: url(contact/background_large2.jpg);
   }
 }
