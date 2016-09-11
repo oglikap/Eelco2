@@ -1,0 +1,61 @@
+body.body-extra {
+  background-image: url(../stylesheets/extra/prikbord-small.jpg);
+}
+h4.header-extra,
+.intro-extra h2 {
+  color: #695846;
+}
+section.nu-article,
+section.intro-extra,
+section.extra-movie {
+  background: #fafafa;
+  padding: 0 2%;
+}
+section.nu-article {
+  @include transform(rotate(2deg));
+}
+section.extra-movie {
+  font-size: 5em;
+  font-family: 'Stardos Stencil Bold', 'Top Secret', 'Due Date', 'Montserrat', sans-serif;
+  margin: 0 auto;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-around);
+  @include transform(rotate(2deg));
+  background-image: url(extra/ritus_Thumbnail.jpg);
+  background-size: cover;
+  border: 3px solid #fafafa;
+  a {
+    text-decoration: none;
+    color: #fafafa;
+  }
+}
+.downloads {
+  background-color: #da2c73;
+}
+ul.download-links a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+ul.download-links a:hover {
+  color: blue;
+}
+
+@media screen and (min-width: 601px) {
+
+  body.body-extra {
+    background-image: url(../stylesheets/extra/prikbord-medium.jpg);
+  }
+  .extra-movie {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  body.body-extra {
+    background-image: url(../stylesheets/extra/prikbord-large.jpg);
+  }
+}

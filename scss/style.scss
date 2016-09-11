@@ -56,7 +56,11 @@ body {
 p {
   font-size: 1.25em;
 }
-img {max-width: 100%;}
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0.5em auto;
+}
 h2,
 h4 {
   font-family: 'Stardos Stencil Bold', 'Top Secret', 'Due Date', 'Montserrat', sans-serif;
@@ -113,15 +117,15 @@ footer {
   }
   .navi {
     border: none;
-    width: 45%;
-    height: 150px;
+    width: 50%;
+    height: 9.5em;
     float: right;
     .navbar {
       @include flexbox;
       @include flex-direction(column);
       @include flex-wrap(wrap);
       @include justify-content(space-around);
-      height: 150px;
+      height: 12.5em;
     }
     .navbar_item {
     border: 3px solid #fafafa;
@@ -153,7 +157,14 @@ footer {
     min-width: 40%;
     @include transform(rotate(2deg));
   }
-
+  .button-pers {
+    @include transform(rotate(-1deg));
+    min-width: 40%;
+  }
+  .button-extra {
+    @include transform(rotate(-1deg));
+    min-width: 45%;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -166,3 +177,5 @@ footer {
 @import "workshops";
 @import "contact";
 @import "home";
+@import "pers";
+@import "extra";

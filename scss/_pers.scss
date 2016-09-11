@@ -1,0 +1,52 @@
+body.body-pers {
+  background-image: url(pers/RITUS-persfoto-zonder-titel-large.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+//  background-size: 100%;
+//  background-position: center;
+}
+.pers-recensie,
+.pers-preview,
+.pers-preview2 {
+  background-color: #fafafa;
+  @include transform(rotate(-1deg));
+  padding: 0 0.5em;
+  a {
+    text-decoration: none;
+    color: #4c5f88;
+    font-weight: bold;
+  }
+}
+.pers-preview2 {
+  @include transform(rotate(2deg));
+}
+.pers-portrait {
+  display: block;
+  margin: 0.5em auto;
+  width: 75%;
+  @include transform(rotate(1deg));
+}
+.pers-preview {
+  margin: 1em;
+  @include transform(rotate(1deg));
+}
+.persmap {
+  width: 5em;
+  height: 5em;
+  display: block;
+  margin: 1em auto;
+  @include border-radius(50%);
+  font-family: 'Stardos Stencil Bold', 'Montserrat', sans-serif;
+  background-color: #4c5f88;
+  border: 2px solid #fafafa;
+  font-size: 4em;
+}
+.header-pers h4 {
+  color: #4c5f88;
+}
+
+@media screen and (min-width: 1025px) {
+  body.body-pers {
+    background-position: center top;
+  }
+}
